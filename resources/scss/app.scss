@@ -10,16 +10,45 @@ body{
     background-color: black;
 }
 /* General */
-img{
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+a{
+    text-decoration: none;
 }
 ul{
     list-style-type: none;
     padding: 0;
 }
+/* Home */
+.poster{
+    img{
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+}
 .details{
     padding: 10px;
+}
+/* Show */
+.comic-details{
+    color: white;
+    h3, strong{
+        color: darkgray;
+    }
+}
+.autors{
+    align-self: flex-end;
+}
+.autors, .artists, .writers{
+    display: flex;
+    strong{
+        margin-right: 10px;
+    }
+    p{
+        font-size: 12px;
+        margin-top: 5px;
+    }
+}
+.writers{
+    margin-left: 15px;
 }
 /* Utilities */
 .w-100{

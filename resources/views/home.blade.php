@@ -21,36 +21,38 @@
         <div class="row">
             @foreach ($comics as $comic)
                 <div class="col-6 col-md-4 col-lg-3 my-4">
-                    <div class="card h-100">
-                        <div class="poster w-100">
-                            <img class="w-100" src="{{$comic->thumb}}" alt="">
+                    <a href="{{Route('comic', $comic->id)}}">
+                        <div class="card h-100">
+                            <div class="poster w-100">
+                                <img class="w-100" src="{{$comic->thumb}}" alt="{{$comic->title}}">
+                            </div>
+                            <div class="details">
+                                <h5>
+                                    {{$comic->title}}
+                                </h5>
+                                <ul>
+                                    <li>
+                                        <strong>
+                                            Series:
+                                        </strong>
+                                        {{$comic->series}}
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            Price:
+                                        </strong>
+                                        {{$comic->price}}
+                                    </li>
+                                    <li>
+                                        <strong>
+                                            Release Date:
+                                        </strong>
+                                        {{$comic->sale_date}}
+                                    </li>
+                                </ul>
+                            </div>
                         </div>
-                        <div class="details">
-                            <h5>
-                                {{$comic->title}}
-                            </h5>
-                            <ul>
-                                <li>
-                                    <strong>
-                                        Series:
-                                    </strong>
-                                    {{$comic->series}}
-                                </li>
-                                <li>
-                                    <strong>
-                                        Price:
-                                    </strong>
-                                    {{$comic->price}}
-                                </li>
-                                <li>
-                                    <strong>
-                                        Release Date:
-                                    </strong>
-                                    {{$comic->sale_date}}
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
+                    </a>
                 </div>
             @endforeach
         </div>
